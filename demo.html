@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Taxon Viewer Testing</title>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="triplefin.js"></script>
+	<script src="taxon-viewer.js"></script>
+	<style>
+		body {
+            font-family: "Fira", Helvetica, Arial, sans-serif;
+            margin: 0;
+            color: #717171;
+            cursor: default;
+        }
+		#container {
+			height: 600px;
+			width: 1000px;
+			position: relative;
+		}
+		.taxon-item-container {
+			position: absolute;
+			border: 1px solid #a5a5a5;
+			height: 100px;
+			width: 300px;
+			border-radius: 10px;
+			box-sizing: border-box;
+			box-shadow: 10px 9px 5px 0px rgba(138,138,138,1);
+		}
+		.taxon-join {
+			position: absolute;
+			/* border: 1px solid red; */
+			stroke: #a5a5a5;
+		}
+		.taxon-content {
+			margin: 5px;
+		}
+		.taxon-item-container img {
+			max-height: 88px;
+			/* max-width: 100px; */
+			border-bottom-left-radius: 10px;
+			border-top-left-radius: 10px;
+		}
+		.taxon-text-container {
+			display: inline-block;
+    		vertical-align: top;
+			margin-left: 3px;
+    		padding-top: 20px;
+		}
+		.taxon-common-name {
+    		padding-top: 10px;
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			var tripleFins = new TaxonViewier(data, "#container");
+		});
+	</script>
+</head>
+
+<body>
+	<div id="container">
+
+	</div>
+</body>
+
+</html>
